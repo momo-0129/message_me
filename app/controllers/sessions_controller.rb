@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       flash[:success] = "You have successfully logged in"
       redirect_to root_path
     else   
-      flash.new[:error] = "There was something wring with your login information"
+      flash.now[:negative] = "There was something wring with your login information"
       render :new, status: :bad_request
     end
   end

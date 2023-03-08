@@ -18,6 +18,14 @@ $(document).on("turbo:load", function() {
   /* 例2）アコーディオンを利用する場合 */
   $('.ui.accordion').accordion();
 
+  $('.message .close')
+  .on('click', function() {
+    $(this)
+      .closest('.message')
+      .transition('fade')
+    ;
+  })
+;
 });
 
 /* "turbo:render" */
@@ -30,5 +38,6 @@ $(document).on("turbo:render", function() {
 
   /* 例2）アコーディオンを利用する場合 */
   $('.ui.accordion').accordion();
+
 
 });
